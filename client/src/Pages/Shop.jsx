@@ -1,8 +1,12 @@
+import Hero from "/BuyBuddy/client/src/components/Hero/Hero";
 import React from "react";
+
 const Shop = () => {
   return (
     <>
-      <div></div>
+      <div>
+        <Hero />
+      </div>
     </>
   );
 };
