@@ -1,3 +1,4 @@
+import Popular from "@/components/Popular/Popular";
 import Hero from "/BuyBuddy/client/src/components/Hero/Hero";
 import React from "react";
 
@@ -6,6 +7,7 @@ const Shop = () => {
     <>
       <div>
         <Hero />
+        <Popular />
       </div>
     </>
   );
