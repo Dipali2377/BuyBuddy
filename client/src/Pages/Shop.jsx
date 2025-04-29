@@ -3,6 +3,7 @@ import Hero from "/BuyBuddy/client/src/components/Hero/Hero";
 import React from "react";
 import Offers from "@/components/Offers/Offers";
 import NewCollections from "@/components/NewCollections/NewCollections";
+import NewsLetter from "@/components/NewsLetter/NewsLetter";
 
 const Shop = () => {
   return (
@@ -12,6 +13,7 @@ const Shop = () => {
         <Popular />
         <Offers />
         <NewCollections />
+        <NewsLetter />
       </div>
     </>
   );
