@@ -1,35 +1,39 @@
-import p1_img from "./p1_img.png";
-import p2_img from "./p2_img.png";
-import p3_img from "./p3_img.png";
-import p4_img from "./p4_img.png";
+import p1_img from "./All_Products_Images/p1_img.png";
+import p2_img from "./All_Products_Images/p2_img.png";
+import p3_img from "./All_Products_Images/p3_img.png";
+import p4_img from "./All_Products_Images/p4_img.png";
 let data_product = [
   {
     id: 1,
-    name: "Striped Flutter Sleeve Overlap Collar",
+    name: "Boys Blue Denim Jacket",
+    category: "kid",
     image: p1_img,
-    new_price: 50.0,
-    old_price: 80.5,
+    new_price: 70.0,
+    old_price: 100.0,
   },
   {
     id: 2,
-    name: "Casual V-Neck Floral Print Dress",
+    name: "Girls Pink Party Dress",
+    category: "kid",
     image: p2_img,
-    new_price: 45.0,
-    old_price: 70.0,
+    new_price: 90.0,
+    old_price: 130.0,
   },
   {
     id: 3,
-    name: "Elegant Lace Panel Blouse",
+    name: "Men's Black Leather Jacket",
+    category: "men",
     image: p3_img,
-    new_price: 35.0,
-    old_price: 55.0,
+    new_price: 150.0,
+    old_price: 220.0,
   },
   {
     id: 4,
-    name: "Denim Jacket with Embroidered Details",
+    name: "Women's Floral Summer Dress",
+    category: "women",
     image: p4_img,
-    new_price: 65.0,
-    old_price: 90.0,
+    new_price: 95.0,
+    old_price: 140.0,
   },
 ];
 
