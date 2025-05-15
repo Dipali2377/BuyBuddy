@@ -84,3 +84,6 @@
   align-items: center;
   justify-content: center;
 }
+.login-button {
+  color: #626262;
+}
