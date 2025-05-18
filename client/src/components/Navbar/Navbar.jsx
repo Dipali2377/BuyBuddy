@@ -2,10 +2,13 @@ import "../Navbar/Navbar.css";
 import logo from "/BuyBuddy/client/src/assets/logo.png";
 import cart from "/BuyBuddy/client/src/assets/cart.png";
 import { Link, useLocation } from "react-router-dom";
+import { useContext } from "react";
+import { ShopContext } from "@/Context/ShopContext";
 
 const Navbar = () => {
   const location = useLocation();
 
+  const { getTotalCartItems } = useContext(ShopContext);
   // Get current route for underline logic
   const currentPath = location.pathname;
 
@@ -51,7 +54,7 @@ const Navbar = () => {
         <Link to="/cart">
           <img src={cart} alt="" style={{ height: "50px", width: "50px" }} />
         </Link>
-        <div className="nav-cart-count">0</div>
+        <div className="nav-cart-count">{getTotalCartItems()}</div>
       </div>
     </div>
   );
