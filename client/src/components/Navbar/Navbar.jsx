@@ -1,14 +1,22 @@
 import "../Navbar/Navbar.css";
 import logo from "/BuyBuddy/client/src/assets/logo.png";
 import cart from "/BuyBuddy/client/src/assets/cart.png";
+import nav_dropdown from "../../assets/nav-dropdown-icon.png";
 import { Link, useLocation } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { ShopContext } from "@/Context/ShopContext";
 
 const Navbar = () => {
   const location = useLocation();
 
   const { getTotalCartItems } = useContext(ShopContext);
+
+  const menuRef = useRef();
+
+  const dropdown_toggle = (e) => {
+    menuRef.current.classList.toggle("nav-menu-visible");
+    e.target.classList.toggle("open");
+  };
   // Get current route for underline logic
   const currentPath = location.pathname;
 
@@ -18,7 +26,13 @@ const Navbar = () => {
         <img src={logo} alt="" style={{ height: "50px", width: "50px" }} />
         <p>BUYBUDDY</p>
       </div>
-      <ul className="nav-menu">
+      <img
+        onClick={dropdown_toggle}
+        src={nav_dropdown}
+        alt=""
+        className="nav-dropdown"
+      />
+      <ul ref={menuRef} className="nav-menu">
         <li>
           <Link to="/" style={{ textDecoration: "none", color: "#626262" }}>
             Shop
