@@ -28,6 +28,10 @@ app.use(cookieParser());
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("App is running");
+});
+
 app.listen(PORT, async () => {
   try {
     await connectDB();
