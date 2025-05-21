@@ -132,3 +132,72 @@ button:hover {
   margin-top: 0.15rem;
   accent-color: #ff4c4c;
 }
+
+/* ------------------ Responsive Design ------------------ */
+
+/* Large Screens - Laptops */
+@media (max-width: 1280px) {
+  .loginsignup-container {
+    padding: 1.8rem;
+  }
+
+  .loginsignup-container h1 {
+    font-size: 1.85rem;
+  }
+}
+
+/* Medium Screens - Tablets Landscape */
+@media (max-width: 1024px) {
+  .loginsignup-container {
+    padding: 1.6rem;
+    max-width: 360px;
+  }
+
+  .loginsignup-container h1 {
+    font-size: 1.75rem;
+  }
+
+  .loginsignup-fields input,
+  button {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small Tablets & Large Mobiles */
+@media (max-width: 800px) {
+  .loginsignup-container {
+    padding: 1.5rem;
+    max-width: 320px;
+  }
+
+  .loginsignup-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .loginsignup-agree {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 500px) {
+  .loginsignup-container {
+    padding: 1.25rem 1rem;
+    max-width: 100%;
+  }
+
+  .loginsignup-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .loginsignup-fields input,
+  button {
+    font-size: 0.9rem;
+    padding: 0.65rem 1rem;
+  }
+
+  .loginsignup-agree {
+    font-size: 0.8rem;
+  }
+}
