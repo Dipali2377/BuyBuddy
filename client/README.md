@@ -1,12 +1,34 @@
-# React + Vite
+# 🛒 BuyBuddy - eCommerce Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+BuyBuddy is a modern and responsive eCommerce web application designed to provide a seamless shopping experience. Users can browse products, manage their cart, and proceed to checkout.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<!--
+## 🚀 Live Preview
 
-## Expanding the ESLint configuration
+<!-- Replace this link when deployed -->
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+[Live Demo](https://your-live-site-link.com) -->
+
+---
+
+## ✨ Features
+
+- 🖥 Fully responsive design for desktop and mobile
+- 🛍 Product display with image, name, and price
+- 🧮 Dynamic cart calculations (subtotal, total)
+- 🎁 Promo code input UI (functionality can be added later)
+- 📦 State management using React Context API
+- 💅 Clean, reusable, and modular component structure
+
+---
+
+## 🛠 Tech Stack
+
+- **React.js**
+- **CSS3**
+- **Vite** (for fast build & dev server)
+- **React Context API** (for global state management)
+
+---
