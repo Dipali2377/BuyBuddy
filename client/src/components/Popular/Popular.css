@@ -22,3 +22,44 @@
   margin-left: 80px;
   /* border: 1px solid red; */
 }
+
+/* ---------------- responsiveness ---------------- */
+
+@media (max-width: 1280px) {
+  .popular h1 {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .popular h1 {
+    font-size: 40px;
+  }
+
+  .popular-item {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 800px) {
+  .popular h1 {
+    font-size: 34px;
+  }
+
+  .popular-item {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .popular h1 {
+    font-size: 28px;
+  }
+
+  .popular-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+}
