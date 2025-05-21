@@ -4,6 +4,10 @@
   align-items: center;
   gap: 10px;
   height: 90vh;
+  /* new added */
+  margin-top: 60px;
+  margin-bottom: 130px;
+  padding: 0 20px;
 }
 .popular h1 {
   color: #171717;
