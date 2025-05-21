@@ -7,7 +7,9 @@
   /* new added */
   margin-top: 60px;
   margin-bottom: 130px;
-  padding: 0 20px;
+
+  padding-left: 20px;
+  padding-right: 120px;
 }
 .popular h1 {
   color: #171717;
