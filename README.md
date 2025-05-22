@@ -4,15 +4,6 @@ BuyBuddy is a modern and responsive eCommerce web application designed to provid
 
 ---
 
-<!--
-## 🚀 Live Preview
-
-<!-- Replace this link when deployed -->
-
-[Live Demo](https://your-live-site-link.com) -->
-
----
-
 ## ✨ Features
 
 - 🖥 Fully responsive design for desktop and mobile
