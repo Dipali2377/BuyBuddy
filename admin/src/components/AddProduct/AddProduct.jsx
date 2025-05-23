@@ -46,7 +46,6 @@ const AddProduct = () => {
       if (uploadResponse.data.success) {
         product.image = uploadResponse.data.image_url;
         // console.log(product);
-        toast.success("Image uploaded successfully");
 
         const productResponse = await axios.post(
           "http://localhost:5000/products/addproduct",
@@ -55,6 +54,13 @@ const AddProduct = () => {
 
         if (productResponse.data.success) {
           toast.success("Product added successfully");
+          setProductDetails({
+            name: "",
+            image: "",
+            category: "women",
+            new_price: "",
+            old_price: "",
+          });
         } else {
           toast.error("Failed to add product");
         }
