@@ -5,17 +5,10 @@ import productModel from "../models/productModel.js";
 const addproduct = async (req, res) => {
   try {
     let products = await productModel.find({});
-    let id;
+    let id = products.length > 0 ? products[products.length - 1].id + 1 : 1;
 
-    if (products.length > 0) {
-      let last_product_array = products.slice(-1);
-      let last_product = last_product_array[0];
-      id = last_product.id + 1;
-    } else {
-      id = 1;
-    }
     const product = new productModel({
-      id: id,
+      id,
       name: req.body.name,
       image: req.body.image,
       category: req.body.category,
@@ -23,16 +16,22 @@ const addproduct = async (req, res) => {
       old_price: req.body.old_price,
     });
 
-    console.log(product);
+    console.log("Saving product:", product);
     await product.save();
     console.log("Saved");
 
-    res.json({
+    res.status(201).json({
       success: true,
-      name: req.body.name,
+      message: "Product added successfully",
+      product,
     });
   } catch (error) {
-    console.log(error);
+    console.error("Error in addproduct:", error);
+    res.status(500).json({
+      success: false,
+      message: "Failed to add product",
+      error: error.message,
+    });
   }
 };
 
