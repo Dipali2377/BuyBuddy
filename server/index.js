@@ -6,6 +6,7 @@ import connectDB from "./config/db.js";
 import multer from "multer";
 import path from "path";
 import productRouter from "./routes/productRoute.js";
+import authRoute from "./routes/authRoute.js";
 dontenv.config();
 const app = express(); // created express server
 
@@ -22,6 +23,7 @@ app.use(express.json());
 // });
 
 app.use("/products", productRouter);
+app.use("/user", authRoute);
 // Image storage engine
 
 const storage = multer.diskStorage({
