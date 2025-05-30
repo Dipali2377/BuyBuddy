@@ -60,7 +60,7 @@ const getproducts = async (req, res) => {
   } catch (error) {}
 };
 
-// new collection data
+// new collection data api
 
 const newCollection = async (req, res) => {
   try {
@@ -74,4 +74,24 @@ const newCollection = async (req, res) => {
   } catch (error) {}
 };
 
-export { addproduct, deleteproduct, getproducts, newCollection };
+// popular in women api
+
+const popularinWomen = async (req, res) => {
+  try {
+    let products = await productModel.find({ category: "women" });
+
+    let popular_in_women = products.slice(0, 4);
+    console.log("popular in women fetched");
+    res.send(popular_in_women);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export {
+  addproduct,
+  deleteproduct,
+  getproducts,
+  newCollection,
+  popularinWomen,
+};
