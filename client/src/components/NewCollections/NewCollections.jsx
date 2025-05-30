@@ -1,14 +1,31 @@
+import axios from "axios";
 import Item from "../Item/Item";
 import "./NewCollections.css";
-import new_collections from "@/assets/NewCollections";
+import { useEffect, useState } from "react";
+// import new_collections from "@/assets/NewCollections";
 const NewCollections = () => {
+  const [new_collection, setNew_Collection] = useState([]);
+
+  const fetchNewCollection = async () => {
+    try {
+      const response = await axios.get(
+        `http://localhost:5000/products/newcollection`
+      );
+      setNew_Collection(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    fetchNewCollection();
+  }, []);
   return (
     <div className="newcollections">
       <h1>NEW COLLECTIONS</h1>
       <hr />
 
       <div className="collections">
-        {new_collections.map((item, i) => {
+        {new_collection.map((item, i) => {
           return (
             <Item
               key={i}

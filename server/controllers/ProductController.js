@@ -60,4 +60,18 @@ const getproducts = async (req, res) => {
   } catch (error) {}
 };
 
-export { addproduct, deleteproduct, getproducts };
+// new collection data
+
+const newCollection = async (req, res) => {
+  try {
+    let products = await productModel.find();
+
+    let newcollection = products.slice(1).slice(-8);
+
+    console.log("New collection fetched");
+
+    res.send(newcollection);
+  } catch (error) {}
+};
+
+export { addproduct, deleteproduct, getproducts, newCollection };
