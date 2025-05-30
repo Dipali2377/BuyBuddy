@@ -5,10 +5,12 @@ import nav_dropdown from "../../assets/nav-dropdown-icon.png";
 import { Link, useLocation } from "react-router-dom";
 import { useContext, useRef } from "react";
 import { ShopContext } from "@/Context/ShopContext";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const location = useLocation();
-
+  const navigate = useNavigate();
   const { getTotalCartItems } = useContext(ShopContext);
 
   const menuRef = useRef();
@@ -62,9 +64,25 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="nav-login-cart">
-        <Link to="/login">
-          <button className="login-button">Login</button>
-        </Link>
+        {localStorage.getItem("Ecom-token") ? (
+          <button
+            className="logout-button"
+            onClick={() => {
+              localStorage.removeItem("Ecom-token");
+              toast.success("Logged out successful!");
+              setTimeout(() => {
+                navigate("/");
+              }, 2000);
+            }}
+          >
+            Logout
+          </button>
+        ) : (
+          <Link to="/login">
+            <button className="login-button">Login</button>
+          </Link>
+        )}
+
         <Link to="/cart">
           <img src={cart} alt="" style={{ height: "50px", width: "50px" }} />
         </Link>
